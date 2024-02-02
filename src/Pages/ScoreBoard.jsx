@@ -21,7 +21,7 @@ const ScoreBoard = () => {
         score={skorPlayerSatu}
         onClickIncrement={() => setSkorPlayerSatu(skorPlayerSatu + 1)}
         onClickDecrement={() => setSkorPlayerSatu(skorPlayerSatu - 1)}
-        backgroundColor="blue-600"
+        backgroundColor="blue-500"
       />
       <PlayerSection
         title="Player 2"
