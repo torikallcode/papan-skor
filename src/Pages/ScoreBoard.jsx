@@ -21,14 +21,14 @@ const ScoreBoard = () => {
         score={skorPlayerSatu}
         onClickIncrement={() => setSkorPlayerSatu(skorPlayerSatu + 1)}
         onClickDecrement={() => setSkorPlayerSatu(skorPlayerSatu - 1)}
-        backgroundColor="blue-500"
+        backgroundColor="bg-blue-500"
       />
       <PlayerSection
         title="Player 2"
         score={skorPlayerDua}
         onClickIncrement={() => setSkorPlayerDua(skorPlayerDua + 1)}
         onClickDecrement={() => setSkorPlayerDua(skorPlayerDua - 1)}
-        backgroundColor="red-600"
+        backgroundColor="bg-red-600"
         classname={`bottom-0 top-auto rounded-tr-md rounded-br-none lg:right-0 lg:left-auto lg:rounded-tl-md lg:rounded-tr-none`}
       />
       <div id='hai' className='h-36 sm:h-40 rounded-l-md bg-gray-800 p-2 sm:p-5 lg:p-5 flex flex-col gap-y-11 lg:gap-x-20 justify-center items-end absolute top-[50%] translate-y-[-50%] lg:translate-y-[-45%] bottom-0 right-0 lg:left-0 lg:top-0 lg:flex-row lg:max-w-[15rem] mx-auto lg:rounded-l-none lg:rounded-b-md'>

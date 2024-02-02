@@ -8,7 +8,7 @@ import ScoreBoard from './Pages/ScoreBoard'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ScoreBoard></ScoreBoard>
+    element: <ScoreBoard />
   }
 ])
 
