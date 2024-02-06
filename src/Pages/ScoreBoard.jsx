@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PlayerSection from '../components/Fragments/PlayerSection';
+import { Button } from '../components/Elements/Button';
+import { ModalBox } from '../components/Fragments/ModalBox';
 
 const ScoreBoard = () => {
   const [skorPlayerSatu, setSkorPlayerSatu] = useState(0);
@@ -21,7 +23,7 @@ const ScoreBoard = () => {
         score={skorPlayerSatu}
         onClickIncrement={() => setSkorPlayerSatu(skorPlayerSatu + 1)}
         onClickDecrement={() => setSkorPlayerSatu(skorPlayerSatu - 1)}
-        backgroundColor="bg-blue-500"
+        backgroundColor="bg-blue-600"
       />
       <PlayerSection
         title="Player 2"
@@ -35,8 +37,29 @@ const ScoreBoard = () => {
         <h1 onClick={() => setBabakPlayersatu(babakPlayerSatu + 1)} className='text-gray-100 text-3xl cursor-pointer w-10 text-center  rotate-90 sm:text-5xl font-utama lg:rotate-[-180]'>{babakPlayerSatu}</h1>
         <h1 onClick={() => setBabakPlayerDua(babakPlayerDua + 1)} className='text-gray-100 text-3xl cursor-pointer w-10 text-center rotate-90 sm:text-5xl font-utama lg:rotate-[-180]'>{babakPlayerDua}</h1>
       </div>
+      <Button classname="absolute top-auto bottom-3 right-1 rotate-90">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+          <path d="M4 18L20 18" stroke="#f4f4f4" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 12L20 12" stroke="#f4f4f4" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 6L20 6" stroke="#f4f4f4" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </Button>
     </section>
   );
 };
 
 export default ScoreBoard;
+
+
+// Penjelasan:
+// Pertama, kita mengimpor useRef dari 'react'.
+// Di dalam komponen React, kita membuat sebuah referensi menggunakan useRef() dan menetapkannya ke dalam variabel (dalam contoh ini, inputRef).
+// Kita menggunakan prop ref pada elemen input dan memberikannya nilai referensi inputRef.
+// Saat fungsi focusInput dipanggil, kita mengakses DOM input dengan menggunakan properti .current dari referensi inputRef.
+// Kami menggunakan .focus() untuk mengatur fokus ke input tersebut.
+// Keuntungan useRef:
+// Memperoleh Akses ke Elemen DOM: useRef memungkinkan Anda untuk mendapatkan akses langsung ke elemen DOM dalam fungsi komponen fungsional.
+// Mempertahankan Nilai antara Rerender: useRef mempertahankan nilai antara render, yang berarti nilai referensi akan selalu sama antara rerender.
+// Kapan Menggunakan useRef:
+// Memperoleh Akses ke Elemen DOM: Jika Anda perlu mengakses atau memanipulasi elemen DOM secara langsung dari dalam komponen React, useRef merupakan pilihan yang baik.
+// Mempertahankan Nilai antara Rerender: Jika Anda perlu menyimpan nilai antara rerender, seperti nilai input dalam form atau data yang perlu disimpan untuk penggunaan berikutnya, useRef sangat berguna.

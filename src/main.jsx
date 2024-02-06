@@ -9,7 +9,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <ScoreBoard />
-  }
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
